@@ -39,13 +39,12 @@ python3 -m venv .venv <br>
 source .venv/bin/activate <br>
 pip install -r requirements.txt <br>
 
-2. Run MCP Server (Separate Terminal)
+#### 2. Run MCP Server (Separate Terminal)
 cd mcp_server <br>
 python server.py <br>
 
-3. Run Main Workflow
+### 3. Run Main Workflow
 In another terminal:
-
 source .venv/bin/activate <br>
 python executor.py <br>
 
