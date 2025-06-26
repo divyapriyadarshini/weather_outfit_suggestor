@@ -1,3 +1,4 @@
+
 # Weather & Outfit Suggestor (Multi-Agent System with Rain Feature & MCP)
 
 This project implements a multi-agent system that suggests appropriate outfits based on real-time weather conditions, including rain probability. It demonstrates integration with a custom MCP (Model Context Provider) server to fetch city coordinates, following principles of the Agent2Agent (A2A) ecosystem.
@@ -33,20 +34,48 @@ The Suggestor Agent recommends suitable clothing based on temperature and rain c
 
 ### 1. Setup
 
-git clone https://github.com/divyapriyadarshini/weather_outfit_suggestor.git <br>
-cd weather_outfit_suggestor <br>
-python3 -m venv .venv <br>
-source .venv/bin/activate <br>
-pip install -r requirements.txt <br>
+```bash
+git clone https://github.com/divyapriyadarshini/weather_outfit_suggestor.git
+cd weather_outfit_suggestor
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
 
 ### 2. Run MCP Server (Separate Terminal)
-cd mcp_server <br>
-python server.py <br>
+
+```bash
+cd mcp_server
+python server.py
+```
 
 ### 3. Run Main Workflow
-In another terminal:
-source .venv/bin/activate <br>
-python executor.py <br>
 
+In another terminal:
+
+```bash
+source .venv/bin/activate
+python executor.py
+```
 
 Follow the prompts to input a city name and receive outfit suggestions based on real-time weather and rain conditions.
+
+## Project Structure
+
+```
+weather_outfit_suggestor/
+├── agents/
+│   ├── suggestor_agent.py
+│   ├── weather_agent.py
+│   └── rain_agent.py
+├── mcp_server/
+│   └── server.py
+├── workflow/
+│   └── workflow_runner.py
+├── executor.py
+├── requirements.txt
+├── .gitignore
+└── README.md
+```
+
+
